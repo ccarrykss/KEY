@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class = 'zagolovki'><img src="img\key logo.svg" height="100px"; width="150px">
+            <div class = rectangle><a class = 'text' href="index.html">ГЛАВНАЯ</a></div>
+            <div class = 'rectangle'><a class = 'text' href="we.html">О НАС</a></div>
+            <div class = 'rectangle'><a class = 'text' href="rieltor.html">КОНТАКТЫ</a></div>
+            <div class = 'rectangle'><a class = 'text' href="catalog.html">КАТАЛОГ</a></div>
+        </div>
+    </header>
+    <body>
+        <div class = 'recgal'>
+            <div id="gallery">
+                <img class="photo active" src="img\kitc.webp" alt="Фото 1">
+                <img class="photo" src="img\bath.webp" alt="Фото 2">
+                <img class="photo" src="img\spalny1.webp" alt="Фото 3">
+                <img class="photo" src="img\hall.webp" alt="Фото 4">
+                <img class="photo" src="img\child.webp" alt="Фото 5">
+            </div>
+            <button id="next">Next</button>
+        </div>
+        <div>
+            <p class = 'psm'>148 000 000 р.</p>
+            <p class = 'psm'>3 комнатная квартира</p>
+            <p class = 'psm'>129.3 м2</p>
+            <p class = 'psm'>11 этаж из 28</p>
+            <div class="circle-container">
+                <div class="circlem"></div>
+                <div class="psm1">Фрунзенская, 11-15 мин.</div>
+                <img class="image" src="img\hod.png" alt="Картинка">
+            </div>
+            <div class="circle-container">
+                <div class="circle1m"></div>
+                <div class="circle2m"></div>
+                <div class="circle3m"></div>
+                <div class="psm1">Киевская, 16-20 мин.</div>
+                <img class="image" src="img\hod.png" alt="Картинка">
+            </div>
+            <p class = 'psm'>Москва, Погодинская ул.4</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class = 'psm2'><b>О квартире</b></p>
+            <p class = 'psm'>   Статус: Квартира</p>
+            <p class = 'psm'>   Количество комнат: 3</p>
+            <p class = 'psm'>   Общая площадь: 129.3 м2</p>
+            <p class = 'psm'>   Этаж: 11 из 28</p>
+            <p class = 'psm'>   Дополнительно: Панорамные окна</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class = 'psm2'><b>Описание</b></p>
+            <p class = 'psm'>Предлагается к продаже уютная трехкомнатная квартира площадью 129 квадратных метров, расположенная в удобном районе недалеко от станции метро Киевская. Квартира отличается просторной планировкой и современным дизайном. </p>
+            <p class = 'psm2'><b>Основные характеристики:</b></p>
+            <p class = 'psm'>- Панорамные окна, которые наполняют жилые комнаты естественным светом и открывают великолепные виды на город.</p>
+            <p class = 'psm'>- Чистовая отделка, готовая к внесению ваших личных дизайнерских решений.</p>
+            <p class = 'psm'>- Просторная кухня, идеально подходящая для семейных уютных вечеров.</p>
+            <p class = 'psm'>- Комнаты с возможностью свободной перепланировки, что позволит создать идеальное пространство для вашей семьи.</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class = psm>Развита инфраструктура: рядом находятся магазины, кафе, школы и парки. Удобное транспортное сообщение обеспечивает быстрое сообщение с центром города. </p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class="psm"><b>Не упустите возможность стать владельцем этой замечательной квартиры!</b></p>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            let currentIndex = 0;
+            const photos = $('.photo');
+        
+            $('#next').click(function(){
+                photos.eq(currentIndex).removeClass('active');
+                currentIndex = (currentIndex + 1) % photos.length;
+                photos.eq(currentIndex).addClass('active');
+            });
+        });
+        </script>
+    
+</body>
+</html>
